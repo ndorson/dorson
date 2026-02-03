@@ -1,8 +1,20 @@
 import { defineConfig } from 'vite';
 import fs from 'fs';
+
 import path from 'path';
+import { resolve } from 'path';
 
 export default defineConfig({
+    build: {
+        rollupOptions: {
+            input: {
+                main: resolve(__dirname, 'index.html'),
+                portfolio: resolve(__dirname, 'portfolio.html'),
+                project: resolve(__dirname, 'project.html')
+                // admin.html is INTENTIONALLY EXCLUDED so it is not built/deployed
+            }
+        }
+    },
     plugins: [
         {
             name: 'save-content-middleware',

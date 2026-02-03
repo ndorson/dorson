@@ -14,6 +14,21 @@ function uuidv4() {
     });
 }
 
+// SECURITY: Localhost Check
+// This ensures the admin panel only runs in a local development environment.
+if (window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
+    document.body.innerHTML = `
+        <div style="display:flex; height:100vh; justify-content:center; align-items:center; background:#000; color:#ff3333; font-family:sans-serif; text-align:center;">
+            <div>
+                <h1>⚠️ ACCESS DENIED</h1>
+                <p>The Admin Panel is for local development only.</p>
+                <a href="/" style="color:white; text-decoration:underline; display:block; margin-top:1rem;">Return to Home</a>
+            </div>
+        </div>
+    `;
+    throw new Error("Admin access blocked: Not localhost.");
+}
+
 // Initial Data Load
 async function loadData() {
     try {
