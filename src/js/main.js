@@ -167,9 +167,13 @@ document.querySelector('#app').innerHTML = `
         <h2 class="reveal-text">Across different projects.</h2>
         <div class="about-elite-grid">
           <div class="about-elite-text">
-            <p class="premium-p">Creative direction in gaming.</p>
-            <p class="premium-p">Photography and cover shoots.</p>
-            <p class="premium-p">YouTube formats, TV productions, and digital products.</p>
+            <p class="premium-p">Besides my passion for graphic design, I have always been deeply immersed in the world of photography and film.</p>
+            <p class="premium-p" style="margin-bottom: 1.5rem;">Over the years, I’ve had the privilege of capturing unique highlights across various creative industries:</p>
+            <ul class="premium-list">
+              <li>Creative direction in gaming</li>
+              <li>Photography and cover shoots</li>
+              <li>YouTube formats, TV productions, and digital products</li>
+            </ul>
           </div>
           <div class="about-elite-visual">
             <div class="video-frame">
