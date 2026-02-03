@@ -1,0 +1,8 @@
+node_modules
+dist
+.env
+.DS_Store
+public/portfolio/portfolio/
+public/portfolio/
+
+
