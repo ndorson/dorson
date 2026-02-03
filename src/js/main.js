@@ -1,5 +1,6 @@
 import '../css/style.css'
 import content from '../data/content.json'
+import { getFooter } from './footer.js'
 
 document.querySelector('#app').innerHTML = `
   <nav class="navbar">
@@ -232,6 +233,7 @@ document.querySelector('#app').innerHTML = `
       </div>
     </section>
   </main>
+  ${getFooter()}
 `
 
 

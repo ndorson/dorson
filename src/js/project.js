@@ -1,5 +1,6 @@
 import '../css/style.css'
 import content from '../data/content.json'
+import { getFooter } from './footer.js'
 
 const app = document.querySelector('#project-app');
 const urlParams = new URLSearchParams(window.location.search);
@@ -132,9 +133,7 @@ if (project) {
       </header>
     </main>
     
-    <footer style="padding: 2rem; text-align: center; color: var(--text-secondary); border-top: 1px solid #222; margin-top: 4rem;">
-        <p>&copy; ${new Date().getFullYear()} Dorson. All rights reserved.</p>
-    </footer>
+    ${getFooter()}
   `;
 
   // Animation Observer

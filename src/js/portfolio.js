@@ -1,5 +1,6 @@
 import '../css/style.css'
 import content from '../data/content.json'
+import { getFooter } from './footer.js'
 
 document.querySelector('#portfolio-app').innerHTML = `
   <nav class="navbar">
@@ -48,6 +49,7 @@ document.querySelector('#portfolio-app').innerHTML = `
       </div>
     </section>
   </main>
+  ${getFooter()}
 `
 
 // Scroll Animation Observer from main.js

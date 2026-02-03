@@ -10,7 +10,9 @@ export default defineConfig({
             input: {
                 main: resolve(__dirname, 'index.html'),
                 portfolio: resolve(__dirname, 'portfolio.html'),
-                project: resolve(__dirname, 'project.html')
+                project: resolve(__dirname, 'project.html'),
+                impressum: resolve(__dirname, 'impressum.html'),
+                privacy: resolve(__dirname, 'privacy.html')
                 // admin.html is INTENTIONALLY EXCLUDED so it is not built/deployed
             }
         }
