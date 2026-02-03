@@ -85,8 +85,9 @@ document.querySelector('#app').innerHTML = `
                 </div>
               </div>
               <div class="item-meta">
-                <span class="item-category">Studio Project</span>
+                <span class="item-category" style="color: #8b5cf6; font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em;">${item.tags || '#StudioProject'}</span>
                 <div class="item-title-visible">${item.title}</div>
+                <div class="item-short-desc" style="font-size: 0.9rem; color: #a1a1b8; margin: 0.25rem 0 0.75rem 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${item.shortDescription || ''}</div>
                 <div class="item-explore">
                   <span>Explore Later</span>
                   <span class="explore-arrow">→</span>

@@ -33,6 +33,8 @@ async function loadData() {
                 grid: ''
             },
             link: item.link || '',
+            tags: item.tags || '#StudioProject',
+            shortDescription: item.shortDescription || '',
             video: item.video || { url: '', type: '' },
             content: item.content || null, // Editor.js data
             sortOrder: item.sortOrder !== undefined ? item.sortOrder : index,
@@ -136,6 +138,17 @@ function renderModal() {
                     <div class="form-group">
                         <label class="form-label">Title</label>
                         <input type="text" id="inp-title" class="form-input" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label">Tags (e.g. #Branding #Web)</label>
+                            <input type="text" id="inp-tags" class="form-input" placeholder="#Design #Development">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Short Description (max 100 chars)</label>
+                            <input type="text" id="inp-short-desc" class="form-input" maxlength="100" placeholder="Brief summary for the grid container...">
+                        </div>
                     </div>
 
                     <div class="form-row">
@@ -416,6 +429,8 @@ function openModal(index) {
         title.textContent = 'Edit Project';
         const p = projects[index];
         document.getElementById('inp-title').value = p.title;
+        document.getElementById('inp-tags').value = p.tags || '';
+        document.getElementById('inp-short-desc').value = p.shortDescription || '';
         document.getElementById('inp-img-main').value = p.images.main || p.image || '';
         document.getElementById('inp-img-carousel').value = p.images.carousel || '';
         document.getElementById('inp-link').value = p.link || '';
@@ -442,6 +457,8 @@ function closeModal() {
 async function saveItem() {
     const index = parseInt(document.getElementById('edit-index').value);
     const title = document.getElementById('inp-title').value;
+    const tags = document.getElementById('inp-tags').value;
+    const shortDesc = document.getElementById('inp-short-desc').value;
     const imgMain = document.getElementById('inp-img-main').value;
     const imgCarousel = document.getElementById('inp-img-carousel').value;
     const link = document.getElementById('inp-link').value;
@@ -455,6 +472,8 @@ async function saveItem() {
     const newItem = {
         id: index === -1 ? uuidv4() : projects[index].id,
         title,
+        tags,
+        shortDescription: shortDesc,
         description: "", // Deprecated, using content now
         image: imgMain, // Legacy sync
         images: {

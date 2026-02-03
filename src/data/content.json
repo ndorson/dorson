@@ -10,6 +10,8 @@
             "grid": "/uploads/img_1769583640925_ukrt5hpbp.jpg"
         },
         "link": "",
+        "tags": "#GameDesign #UI/UX #Worldbuilding",
+        "shortDescription": "Poker ecosystem blending gameplay mechanics, progression, and interactive design",
         "video": {
             "url": "",
             "type": ""
@@ -29,6 +31,8 @@
             "grid": "/uploads/img_1770072968118_rwux2h5li.jpg"
         },
         "link": "",
+        "tags": "#ProductDesign #UI/UX #DataVisualization",
+        "shortDescription": "Simplifying table selection across poker apps with real-time data",
         "video": {
             "url": "",
             "type": ""
@@ -48,17 +52,21 @@
             "grid": "/uploads/img_1770073097907_q0swtttwu.jpg"
         },
         "link": "",
-        "date": "2026-01-27",
+        "tags": "#ProductDesign #UI/UX #VideoEditing #SaaS",
+        "shortDescription": "Professional Poker video editor built for hand replays, visuals, and content creation",
         "video": {
             "url": "",
             "type": ""
         },
         "content": "<p>As a professional poker player based in Las Vegas, I create poker vlogs where I talk through hands and moments from the table. I wanted a fast, clean way to visually recreate hands for video, without clunky software, screenshots, or over-explaining.</p><p>So I designed and built my own solution.</p><p><br></p><p>Allin1.Studio lets you quickly set up poker hands, replay actions step by step, and generate polished table visuals that fit seamlessly into modern video content. The focus is on speed, clarity, and aesthetics making hands easy to follow without breaking the flow of a vlog.</p>",
-        "sortOrder": 2
+        "sortOrder": 2,
+        "date": "2026-01-27"
     },
     {
         "id": "269ac1a3-87f1-45f0-8aa5-d587f8cb6acf",
-        "title": "Marketing Design Shark Lock  - Casino Slot Game",
+        "title": "Shark Lock",
+        "tags": "#MarketingDesign #VisualDesign #Branding",
+        "shortDescription": "Visual marketing design for a casino slot game",
         "description": "",
         "image": "https://www.dorson.de/wp-content/uploads/2024/03/bluberi__sharklock_fullpage_compressed.jpg",
         "images": {
@@ -67,13 +75,13 @@
             "grid": "https://www.dorson.de/wp-content/uploads/2024/03/bluberi__sharklock_fullpage_compressed.jpg"
         },
         "link": "https://www.dorson.de/my-bluberi-job-interview/",
+        "date": "",
         "video": {
             "url": "",
             "type": ""
         },
         "content": "<p><br></p>",
-        "sortOrder": 3,
-        "date": ""
+        "sortOrder": 3
     },
     {
         "id": "ec857a35-9204-4e88-913b-2221c7839b83",
@@ -86,6 +94,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/snipes-opening-wolfsburg-mit-king-kool-savas/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -105,6 +115,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/reflections-as-creative-director-at-hd-poker/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -124,6 +136,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/sean-perry-wins/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -143,6 +157,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/my-role-as-social-media-content-creator-for-coinpoker/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -162,6 +178,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/twitch-stream-makeover-a-dark-and-mysterious-007/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -181,6 +199,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/gaming-arts-animated-promos-and-event-videos/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -200,6 +220,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/art-gallery-in-germany/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -219,6 +241,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/adonia-germany-douglas-kosmetik-produkt/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -238,6 +262,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/produkt-fotografie-fur-b-o-s/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -257,6 +283,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/run-good-poker-tracker-ui-design/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -276,6 +304,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/kati-colln/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -295,6 +325,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/ex-x-factor-kandidat-pino-severino/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -314,6 +346,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/computerbild/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -333,6 +367,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/dj-robstar-making-of-photoshoot/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -352,6 +388,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/sunny-sunday-ride/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -371,6 +409,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/dj-yeezy/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -390,6 +430,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/insidr-kinky-by-feli-making-of/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -409,6 +451,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/tommy-finke/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -428,6 +472,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/balkan-wedding/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -447,6 +493,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/eventfotografie-fur-pepe-jeans-london/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -466,6 +514,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/farhad-bazleh-behind-the-scenes/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -485,6 +535,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/antonino-m/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -504,6 +556,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/new-stuff/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -523,6 +577,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/rumblers-cc-ruhrpott-bbq-meeting/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -542,6 +598,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/achtung-chuck-norris-hat-konkurrenz-bekommen/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -561,6 +619,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/new-office/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -580,6 +640,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/halloween-shoot/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -599,6 +661,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/usa-2012/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -618,6 +682,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/insider-making-of-covershoot/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -637,6 +703,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/usa-gentleman-of-the-road/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -656,6 +724,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/shooting-timelaps/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -675,6 +745,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/shoot-mit-koc-security-beendet/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -694,6 +766,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/hans-sarpei/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
@@ -713,6 +787,8 @@
             "grid": ""
         },
         "link": "https://www.dorson.de/sibel-mehmet-cikar/",
+        "tags": "#StudioProject",
+        "shortDescription": "",
         "video": {
             "url": "",
             "type": ""
