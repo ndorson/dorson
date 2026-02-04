@@ -357,7 +357,8 @@ function initCelestialEffects() {
   const container = document.querySelector('.hero-stars');
   if (!container) return;
 
-  const starCount = 50;
+  // Reduce star count significantly on mobile for performance
+  const starCount = isMobile() ? 15 : (isTablet() ? 30 : 50);
 
   // Generate Stars
   for (let i = 0; i < starCount; i++) {
@@ -602,7 +603,11 @@ function initPokerCardScrollEffects() {
       scale(${card1Scale})
     `;
     card1.style.opacity = Math.max(0, card1Opacity);
-    card1.style.filter = `drop-shadow(0 ${10 + card1Eased * 20}px ${30 + card1Eased * 40}px rgba(0, 0, 0, ${0.7 + card1Eased * 0.3}))`;
+
+    // Skip expensive filters on mobile/tablet for performance
+    if (!isMobile() && !isTablet()) {
+      card1.style.filter = `drop-shadow(0 ${10 + card1Eased * 20}px ${30 + card1Eased * 40}px rgba(0, 0, 0, ${0.7 + card1Eased * 0.3}))`;
+    }
 
     // ========== CARD 2: Orbit to the right with rotation ==========
     const card2MoveX = easedProgress * 25; // Move right
@@ -629,9 +634,7 @@ function initPokerCardScrollEffects() {
       translate(-50%, -50%)
       translate(${card3MoveX}vw, ${card3MoveY}vh)
       scale(${card3Scale})
-      perspective(800px)
-      rotateX(${card3RotateX}deg)
-      rotateZ(${card3RotateZ}deg)
+      ${!isMobile() && !isTablet() ? `perspective(800px) rotateX(${card3RotateX}deg) rotateZ(${card3RotateZ}deg)` : `rotateZ(${card3RotateZ}deg)`}
     `;
 
     // ========== CARD 4: Parallax - moves slower (deeper in background) ==========
@@ -646,7 +649,11 @@ function initPokerCardScrollEffects() {
       translate(${card4MoveX}vw, ${card4MoveY}vh)
       scale(${card4Scale})
     `;
-    card4.style.filter = `blur(${card4Blur}px) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5))`;
+
+    // Skip expensive filters on mobile/tablet
+    if (!isMobile() && !isTablet()) {
+      card4.style.filter = `blur(${card4Blur}px) drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5))`;
+    }
     card4.style.opacity = Math.max(0.2, card4Opacity);
 
     ticking = false;

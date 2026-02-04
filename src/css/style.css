@@ -1536,6 +1536,10 @@ section h2::after {
   .navbar {
     padding: 0 1rem;
     height: 70px;
+    backdrop-filter: none;
+    /* Disable expensive blur on mobile */
+    background: rgba(8, 8, 8, 0.95);
+    /* More opaque background instead */
   }
 
   .logo-img {
@@ -1602,7 +1606,8 @@ section h2::after {
     width: 100%;
     height: 100vh;
     background: rgba(10, 10, 15, 0.98);
-    backdrop-filter: blur(20px);
+    backdrop-filter: none;
+    /* Disable expensive blur on mobile */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1706,6 +1711,8 @@ section h2::after {
   .hero-fog-layer-3,
   .hero-fog-overlay {
     opacity: 0.4;
+    filter: none !important;
+    /* Disable heavy SVG turbulence filter on mobile */
     /* Make fog MUCH wider to prevent right-side gap/clipping */
     width: 200%;
     left: -50%;
@@ -1780,8 +1787,12 @@ section h2::after {
   .portfolio-item {
     padding: 10px;
     border-radius: 24px;
+    backdrop-filter: none;
+    /* Disable expensive blur on mobile */
+    background: rgba(255, 255, 255, 0.05);
     /* Reduce initial transform for smoother mobile animation */
-    transform: translateY(40px) scale(0.95);
+    transform: translateY(40px) scale(0.95) translateZ(0);
+    will-change: transform, opacity;
   }
 
   .portfolio-item.visible {
@@ -1825,8 +1836,12 @@ section h2::after {
   .service-card {
     padding: 2rem 1.5rem;
     border-radius: 20px;
+    backdrop-filter: none;
+    /* Disable expensive blur on mobile */
+    background: rgba(255, 255, 255, 0.05);
     /* Reduce 3D effects on mobile */
-    transform: translateY(50px) scale(0.95);
+    transform: translateY(50px) scale(0.95) translateZ(0);
+    will-change: transform, opacity;
   }
 
   .service-card.visible {
@@ -2171,6 +2186,9 @@ section h2::after {
   .legal-card {
     padding: 2rem;
     border-radius: 24px;
+    backdrop-filter: none;
+    /* Disable expensive blur on mobile */
+    background: rgba(255, 255, 255, 0.05);
   }
 }
 
