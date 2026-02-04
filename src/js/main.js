@@ -2,6 +2,12 @@ import '../css/style.css'
 import content from '../data/content.json'
 import { getFooter } from './footer.js'
 
+// ============================================
+// MOBILE DETECTION - Must be defined first!
+// ============================================
+const isMobile = () => window.innerWidth <= 768;
+const isTablet = () => window.innerWidth > 768 && window.innerWidth <= 1024;
+
 document.querySelector('#app').innerHTML = `
   <nav class="navbar">
     <div class="logo">
@@ -262,7 +268,9 @@ const portfolioObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       // Add staggered delay based on index when appearing
-      const delay = Array.from(document.querySelectorAll('.portfolio-item')).indexOf(entry.target) * 100;
+      // Reduce delay on mobile for snappier feel
+      const baseDelay = isMobile() ? 50 : 100;
+      const delay = Array.from(document.querySelectorAll('.portfolio-item')).indexOf(entry.target) * baseDelay;
       setTimeout(() => {
         entry.target.classList.add('visible');
       }, delay);
@@ -277,7 +285,7 @@ const portfolioObserver = new IntersectionObserver((entries) => {
 }, {
   root: null,
   rootMargin: '0px',
-  threshold: 0.1
+  threshold: isMobile() ? 0.05 : 0.1  // Lower threshold on mobile for earlier trigger
 });
 
 document.querySelectorAll('.portfolio-item').forEach(item => {
@@ -536,6 +544,12 @@ function initPokerCardScrollEffects() {
   const hero = document.querySelector('.hero');
 
   if (!hero || !card1 || !card2 || !card3 || !card4) return;
+
+  // Disable heavy animations on mobile for performance
+  if (isMobile()) {
+    console.log('%c📱 MOBILE DETECTED - Simplified card animations enabled', 'color: #10b981; font-size: 14px;');
+    return;
+  }
 
   // Store initial positions
   const initialPositions = {
