@@ -2220,3 +2220,22 @@ section h2::after {
     max-width: 240px;
   }
 }
+
+/* ============================================ */
+/* IPAD MINI / TABLET PORTRAIT FIX (700px - 768px) */
+/* ============================================ */
+@media only screen and (min-width: 700px) and (max-width: 768px) {
+  .hero-characters {
+    /* Move WAY down for iPad Mini */
+    bottom: -200px !important;
+    /* Adjust width for wider screen */
+    width: 110% !important;
+    /* Center better */
+    transform: translateX(-10%) !important;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    /* Better text size for tablet */
+  }
+}

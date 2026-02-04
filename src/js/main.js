@@ -557,12 +557,6 @@ function initPokerCardScrollEffects() {
 
   if (!hero || !card1 || !card2 || !card3 || !card4) return;
 
-  // Disable heavy animations on mobile for performance
-  if (isMobile()) {
-    console.log('%c📱 MOBILE DETECTED - Simplified card animations enabled', 'color: #10b981; font-size: 14px;');
-    return;
-  }
-
   // Store initial positions
   const initialPositions = {
     card1: { left: 78.4777, top: 85.5057 },
