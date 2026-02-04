@@ -23,7 +23,19 @@ document.querySelector('#app').innerHTML = `
       <a href="#about">Studio</a>
       <a href="#contact">Contact</a>
     </div>
+    <div class="burger-menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </nav>
+
+  <div class="mobile-menu">
+    <a href="#portfolio">Projects</a>
+    <a href="#services">Services</a>
+    <a href="#about">Studio</a>
+    <a href="#contact">Contact</a>
+  </div>
 
   <header class="hero">
     <div class="container">
@@ -664,5 +676,40 @@ function initPokerCardScrollEffects() {
 
 // Initialize scroll effects
 initPokerCardScrollEffects();
+
+// ============================================
+// BURGER MENU FUNCTIONALITY
+// ============================================
+const burgerMenu = document.querySelector('.burger-menu');
+const mobileMenu = document.querySelector('.mobile-menu');
+const mobileMenuLinks = document.querySelectorAll('.mobile-menu a');
+
+if (burgerMenu && mobileMenu) {
+  // Toggle menu on burger click
+  burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
+  });
+
+  // Close menu when a link is clicked
+  mobileMenuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      burgerMenu.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Close menu on escape key
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && mobileMenu.classList.contains('active')) {
+      burgerMenu.classList.remove('active');
+      mobileMenu.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+}
 
 console.log('Dorson Studio Website Initialized with ' + content.length + ' items.');
