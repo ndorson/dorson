@@ -95,12 +95,21 @@ document.querySelector('#app').innerHTML = `
           ${content
     .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
     .slice(0, 4)
-    .map((item, index) => `
-            <div class="portfolio-item disabled-project fade-in-up" style="animation-delay: ${index * 0.1}s">
+    .map((item, index) => {
+      const hasLink = item.link && item.link.startsWith('http');
+      const target = hasLink ? ' target="_blank" rel="noopener noreferrer"' : '';
+      const hrefAttr = hasLink ? ` href="${item.link}"` : '';
+      const tagType = hasLink ? 'a' : 'div';
+      const disabledClass = hasLink ? '' : ' disabled-project';
+      const overlayText = hasLink ? 'View Project' : 'Project Coming Soon';
+      const exploreText = hasLink ? 'Explore' : 'Explore Later';
+
+      return `
+            <${tagType}${hrefAttr}${target} class="portfolio-item${disabledClass} fade-in-up" style="animation-delay: ${index * 0.1}s">
               <div class="image-wrapper">
                 <img src="${(item.images && item.images.main) ? item.images.main : (item.image || '')}" alt="${item.title}" loading="lazy">
                 <div class="overlay">
-                  <h3>Project Coming Soon</h3>
+                  <h3>${overlayText}</h3>
                 </div>
               </div>
               <div class="item-meta">
@@ -108,12 +117,13 @@ document.querySelector('#app').innerHTML = `
                 <div class="item-title-visible">${item.title}</div>
                 <div class="item-short-desc" style="font-size: 0.9rem; color: #a1a1b8; margin: 0.25rem 0 0.75rem 0; line-height: 1.4; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">${item.shortDescription || ''}</div>
                 <div class="item-explore">
-                  <span>Explore Later</span>
+                  <span>${exploreText}</span>
                   <span class="explore-arrow">→</span>
                 </div>
               </div>
-            </div>
-          `).join('')}
+            </${tagType}>
+          `;
+    }).join('')}
         </div>
         <div style="text-align: center; margin-top: 3rem;">
           <span class="btn-view-all disabled-btn fade-in-up">View All Projects</span>

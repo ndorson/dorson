@@ -19,8 +19,12 @@ document.querySelector('#portfolio-app').innerHTML = `
         <div id="portfolio-grid" class="grid-container">
           ${content
     .sort((a, b) => (a.sortOrder || 0) - (b.sortOrder || 0))
-    .map((item, index) => `
-            <a href="/project.html?id=${item.id || index}" class="portfolio-item fade-in-up" style="animation-delay: ${index * 0.05}s">
+    .map((item, index) => {
+      const hasExternalLink = item.link && item.link.startsWith('http');
+      const href = hasExternalLink ? item.link : `/project.html?id=${item.id || index}`;
+      const target = hasExternalLink ? ' target="_blank" rel="noopener noreferrer"' : '';
+      return `
+            <a href="${href}"${target} class="portfolio-item fade-in-up" style="animation-delay: ${index * 0.05}s">
               <div class="image-wrapper">
                  <img src="${(item.images && item.images.main) ? item.images.main : (item.image || '')}" alt="${item.title}" loading="lazy">
                 <div class="overlay">
@@ -36,7 +40,7 @@ document.querySelector('#portfolio-app').innerHTML = `
                 </div>
               </div>
             </a>
-          `).join('')}
+          `; }).join('')}
         </div>
       </div>
     </section>
